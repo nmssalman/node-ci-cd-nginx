@@ -8,14 +8,10 @@ services:
       - NODE_ENV=production
     volumes:
       - ./:/home/node/app
-    expose:
-      - "3000"
     ports: 
       - "3000:3000"
     command: "npm start"
   web:
     image: "nginx:latest"
-    expose: 
-      - "8000"
     ports: 
       - "8000:8000"
